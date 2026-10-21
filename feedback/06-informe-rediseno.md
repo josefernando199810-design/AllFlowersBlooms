@@ -51,7 +51,7 @@ Para publicar: entra al editor de Base44, revisa la vista previa y, si te gusta,
   - Incluye ahora Entregas, Pagos y Tu pedido, que antes solo se encontraban escribiendo la URL.
   - Muestra tus redes activas (Instagram, Facebook).
   - Respeta los interruptores de visibilidad que ya tenías en el admin.
-- **Pie de página útil:** descripción, ubicación, horario, enlaces de ayuda y redes. Usa los textos de *Admin → Redes y contacto*; antes solo mostraba el copyright.
+- **Pie de página:** se probó uno grande con contacto y enlaces, pero **lo quitaste a pedido tuyo**. Se restauró la franja verde original con el copyright.
 - **Portada:**
   - Ahora muestra los botones **"Explorar catálogo"** y **"Cómo pedir"**. Ya estaban configurados en *Contenido → Portada* pero no aparecían.
   - El texto es más grande y legible, y en celular tiene un velo suave para que se lea sobre la foto.
