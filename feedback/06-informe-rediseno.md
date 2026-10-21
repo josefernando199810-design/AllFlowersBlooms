@@ -97,6 +97,43 @@ Para publicar: entra al editor de Base44, revisa la vista previa y, si te gusta,
 - Se eliminaron imports sin usar en 51 archivos (los 94 errores de lint).
 - Las redes sociales ahora se definen en un solo lugar (`src/lib/socialLinks.js`), compartido por el menú, el pie y la página de Redes.
 
+## Ronda 2: área de desarrollador y nuevos controles
+
+Punto de restauración: **"Ronda 2: área de desarrollador, revisión de la tienda y nuevos controles (sin publicar)"**. Para volver a la ronda 1, restaura "Rediseño de Claude: tienda, admin y desarrollador (sin publicar)".
+
+### Riesgo serio corregido
+
+| Problema | Arreglo |
+|---|---|
+| La tienda solo leía los **200 registros de configuración más recientes**, y cada pedido agrega una marca de "alerta enviada" (ya hay 133 registros). Al pasar de 200, ajustes antiguos como los colores del tema o el orden de las secciones habrían dejado de cargarse, y la tienda habría vuelto sola al diseño de fábrica. | Ahora se leen todos los registros, también en Promociones. La Revisión de la tienda avisa si los registros crecen demasiado. |
+
+### Área de desarrollador
+
+- **Resumen técnico** (nueva pantalla de inicio del desarrollador):
+  - Ficha de la tienda: nombre, propietaria y estado. Ya existía en el servidor, pero no se mostraba.
+  - Cifras rápidas: productos activos, pedidos en curso y registros de configuración.
+  - Acceso directo al modo mantenimiento.
+  - La revisión de la tienda.
+  - Los últimos accesos.
+- **Accesos del desarrollador:** registro de inicios de sesión, entradas al panel y cambios de cuentas y permisos, en español. Ya se guardaba en el servidor, pero no tenía pantalla.
+- **Registro de entrada al panel:** ahora queda registrado cada vez que el desarrollador entra al panel (una vez por sesión). Esta función existía en el servidor pero nunca se usaba.
+- La etiqueta de la barra superior ahora dice **"Modo desarrollador"**. Antes decía "Modo de mantenimiento" y se confundía con el nuevo modo mantenimiento de la tienda.
+
+### Controles que faltaban
+
+| Nuevo control | Dónde está | Qué hace |
+|---|---|---|
+| **Revisión de la tienda** | Configuración → Revisión de la tienda (también en el Resumen técnico) | Revisa automáticamente lo que confunde a los clientes y muestra un botón "Corregir" que lleva al lugar exacto. Con tus datos actuales detecta 4 cosas: WhatsApp desactivado, "Gran Vía"/"La Gran Via", el precio distinto de Amarillo Intenso y faltas de tildes en los días de entrega. |
+| **Chat con clientes** | Configuración general | Interruptores para activar el chat y para mostrarlo en el menú. Antes no había forma de apagarlo. Si se desactiva, la página del chat muestra un aviso con enlace a redes, y las conversaciones no se borran. |
+| **Modo mantenimiento** | Configuración general | Cierra la tienda temporalmente con un mensaje que tú escribes. Pide confirmación antes de activarse. Con sesión iniciada sigues viendo la tienda, con una franja amarilla. Las páginas de comprobante y de pedido siguen funcionando. |
+| **Tipo de flores (natural / artesanal)** | Productos → editar producto | Muestra "Flor natural" o "Flor artesanal" en las tarjetas y en la ventana de compra. Si no eliges ninguno, no se muestra nada. |
+
+### Verificación de la ronda 2
+
+- **Pantallas:** 51 pantallas probadas en la copia con datos simulados, sin errores. Incluye el modo mantenimiento visto como cliente y como administradora.
+- **Código:** lint en 0 errores y compila en Base44. El código quedó idéntico al verificado (checksum).
+- **Vista previa real:** inicio, entregas, chat, promociones, login y admin cargan sin errores.
+
 ## Lo que NO cambié (y deberías revisar tú)
 
 Son datos que se editan en el admin, no código:
