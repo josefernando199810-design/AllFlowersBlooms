@@ -143,6 +143,18 @@ Punto de restauración: **"Puntos de entrega en tarjetas agrupadas (sin publicar
 - Si ya se eligió una fecha, los puntos que no atienden ese día aparecen apagados con el aviso "No disponible el miércoles" y pasan al final de su grupo.
 - El pedido no avanza si el punto elegido no atiende en la fecha seleccionada.
 
+## Portada animada y puntos de entrega desplegables
+
+Punto de restauración: **"Animación de portada y puntos de entrega desplegables (sin publicar)"**.
+
+- **Portada:** al entrar, el título aparece palabra por palabra (suben y se enfocan). Después aparecen el texto, los botones y la frase inferior. Todo dura un poco más de 2 segundos.
+  - En el editor visual el texto se muestra quieto, para poder editarlo.
+  - Si el celular tiene activado "reducir movimiento", el texto aparece sin animación.
+- **Punto de entrega:** las tarjetas quedan ocultas. Se ve un solo botón, "Selecciona un punto de entrega", y al tocarlo se despliegan.
+  - Al elegir un punto, la lista se cierra y el botón muestra el punto elegido (nombre, días y costo) con la opción **"Cambiar"**.
+  - Si después se cambia la fecha a un día en que ese punto no atiende, el botón avisa "No disponible el … · elige otro".
+- Verificación: lint y compilación sin errores, y el código en Base44 quedó idéntico al probado (checksum).
+
 ## Lo que NO cambié (y deberías revisar tú)
 
 Son datos que se editan en el admin, no código:
