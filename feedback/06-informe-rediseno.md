@@ -163,6 +163,16 @@ Punto de restauración: **"El Ritual animado y menú sin repetidos (sin publicar
   - Antes la animación ocurría al cargar la página, cuando la sección todavía no se veía.
 - **Menú ☰:** se quitó el grupo "Ayuda con tu pedido", que repetía exactamente lo que ya muestra el botón **?** del encabezado. Esos accesos quedan solo en el botón **?**.
 
+## Eliminar clientes
+
+Punto de restauración: **"Eliminar clientes de la lista (sin publicar)"**.
+
+- En **Ventas → Clientes**, cada ficha tiene un botón de papelera. Antes de eliminar, pide confirmación.
+- Como elegiste, eliminar **solo quita al cliente de la lista**: sus pedidos, las ventas y la contabilidad no se borran.
+- Los clientes eliminados se ven en **"Ver eliminados (n)"**, donde se pueden **restaurar**.
+- Cada eliminación y restauración queda anotada en la Bitácora.
+- Probado en la copia con datos simulados: eliminar, ver eliminados y restaurar, sin errores.
+
 ## Lo que NO cambié (y deberías revisar tú)
 
 Son datos que se editan en el admin, no código:
