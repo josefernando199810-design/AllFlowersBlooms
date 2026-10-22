@@ -155,6 +155,14 @@ Punto de restauración: **"Animación de portada y puntos de entrega desplegable
   - Si después se cambia la fecha a un día en que ese punto no atiende, el botón avisa "No disponible el … · elige otro".
 - Verificación: lint y compilación sin errores, y el código en Base44 quedó idéntico al probado (checksum).
 
+## El Ritual animado y menú sin repetidos
+
+Punto de restauración: **"El Ritual animado y menú sin repetidos (sin publicar)"**.
+
+- **El Ritual (los 3 pasos):** al bajar hasta la sección aparece primero el título, y luego las tres tarjetas, una tras otra.
+  - Antes la animación ocurría al cargar la página, cuando la sección todavía no se veía.
+- **Menú ☰:** se quitó el grupo "Ayuda con tu pedido", que repetía exactamente lo que ya muestra el botón **?** del encabezado. Esos accesos quedan solo en el botón **?**.
+
 ## Lo que NO cambié (y deberías revisar tú)
 
 Son datos que se editan en el admin, no código:
