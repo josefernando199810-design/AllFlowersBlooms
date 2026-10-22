@@ -173,6 +173,19 @@ Punto de restauración: **"Eliminar clientes de la lista (sin publicar)"**.
 - Cada eliminación y restauración queda anotada en la Bitácora.
 - Probado en la copia con datos simulados: eliminar, ver eliminados y restaurar, sin errores.
 
+## Revisión de la tienda: ocultar avisos y precios más precisos
+
+Punto de restauración: **"Revisión de la tienda: ocultar avisos y precios más precisos (sin publicar)"**.
+
+- **Cómo sabe que es el mismo ramo:** cada artículo de *Flores en stock* guarda el producto del catálogo del que se creó. El aviso compara solo ese enlace, nunca los nombres.
+- **Menos falsas alarmas.** El aviso de precios ya no cuenta:
+  - los ramos con una promoción activa, porque ahí el precio distinto es intencional;
+  - los artículos con 0 unidades, porque los clientes no los ven.
+  - Por eso desapareció "Ramo de tulipanes, lirios y margaritas", que tiene 0 unidades. Solo queda Amarillo Intenso ($4 en el catálogo y $5 en Flores en stock), que no tiene promoción.
+- **Ocultar avisos:** cada aviso tiene el botón **"Ocultar aviso"**.
+  - Los avisos ocultos se ven en **"Ver avisos ocultos (n)"**, con el botón **"Mostrar"** para que vuelvan.
+  - Si aparece un problema nuevo en ese mismo aviso (por ejemplo, otro producto con precio distinto), el aviso vuelve a mostrarse solo.
+
 ## Lo que NO cambié (y deberías revisar tú)
 
 Son datos que se editan en el admin, no código:
