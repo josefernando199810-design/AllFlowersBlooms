@@ -134,6 +134,15 @@ Punto de restauración: **"Ronda 2: área de desarrollador, revisión de la tien
 - **Código:** lint en 0 errores y compila en Base44. El código quedó idéntico al verificado (checksum).
 - **Vista previa real:** inicio, entregas, chat, promociones, login y admin cargan sin errores.
 
+## Puntos de entrega en tarjetas
+
+Punto de restauración: **"Puntos de entrega en tarjetas agrupadas (sin publicar)"**.
+
+- La lista desplegable se reemplazó por tarjetas agrupadas en **Entrega sin costo**, **Puntos con envío** y **Envío a domicilio**.
+- Cada tarjeta muestra nombre, zona, días y horario (en formato de 12 horas), y el precio como "Gratis" o "$1.75".
+- Si ya se eligió una fecha, los puntos que no atienden ese día aparecen apagados con el aviso "No disponible el miércoles" y pasan al final de su grupo.
+- El pedido no avanza si el punto elegido no atiende en la fecha seleccionada.
+
 ## Lo que NO cambié (y deberías revisar tú)
 
 Son datos que se editan en el admin, no código:
